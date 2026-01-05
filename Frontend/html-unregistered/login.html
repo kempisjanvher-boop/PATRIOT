@@ -4,33 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Webpage</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="/Frontend/css-unregistered/login.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img src="./images/Patriot.png" alt="Patriot Logo" class="logo">
-        <h1>The Patriot</h1>
-        <button class="signup" onclick="window.location.href='signup.html'">Sign Up</button>
-        <div class="menuOption" onclick="toggleMenu()">&#9776;</div> 
-    </header>
-    
-    <nav id="options">
-        <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Articles</a></li>
-            <li><a href="#">Updates</a></li>
-            <li><a href="#">Watch</a></li>
-            <li><a href="#">Community</a></li>
-        </ul>
-    </nav>
+    <div id="site-header"></div>
 
     <main>
         <div class="parent">
             <div class="container1">
                 <h1>Sign In to <b style="color: #810004;">The Patriot</b></h1>
-                <button class="googleSignup"><img src="./images/Google.png" style="width: 40px; height: 20px;">Sign in with Google</button>
+                <button class="googleSignup"><img src="/images/Google.png" style="width: 40px; height: 20px;">Sign in with Google</button>
                 <div class="divider">
                     <span>Or Sign In with Email</span>
                 </div>
@@ -64,6 +48,9 @@
     </main>
 
     <script>
+        fetch("./header-unregistered.html").then(res => res.text()).then(html => {
+            document.getElementById("site-header").innerHTML = html;
+            });
         function toggleMenu() {
             const menu = document.getElementById('options');
             menu.classList.toggle('show');
