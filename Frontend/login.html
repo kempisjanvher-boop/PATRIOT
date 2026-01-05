@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webpage</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="./images/Patriot.png" alt="Patriot Logo" class="logo">
+        <h1>The Patriot</h1>
+        <button class="signup" onclick="window.location.href='signup.html'">Sign Up</button>
+        <div class="menuOption" onclick="toggleMenu()">&#9776;</div> 
+    </header>
+    
+    <nav id="options">
+        <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">Updates</a></li>
+            <li><a href="#">Watch</a></li>
+            <li><a href="#">Community</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="parent">
+            <div class="container1">
+                <h1>Sign In to <b style="color: #810004;">The Patriot</b></h1>
+                <button class="googleSignup"><img src="./images/Google.png" style="width: 40px; height: 20px;">Sign in with Google</button>
+                <div class="divider">
+                    <span>Or Sign In with Email</span>
+                </div>
+                <div class="inputEmail">
+                    <input type="text" id="email" required>
+                    <label for="email">Email Address</label>
+                </div>
+                <div class="inputPassword">
+                    <input type="password" id="password" required>
+                    <label for="password">Password</label>
+                </div>
+                <a href="#" class="forgotPassword">I forgot my password</a>
+                <div class="rememberMe">
+                    <input type="checkbox" id="rememberMe">
+                    <label for="rememberMe">Remember Me</label>
+                </div>
+                <button onclick="signIn()" class="signInButton">Sign In</button>
+            </div>
+            <div class="container2">
+                <h1>Welcome to The Patriot!</h1>
+                <p class="be"><b>Be one of the voices behind our student <br>publication of PUP-Parañaque Campus.</b></p>
+                <p>Join fellow student writers, editors, and creatives in <br>informing, inspiring, and empowering our community.</p>
+                <button onclick="window.location.href='signup.html'" class="createAccount">Create Account</button>
+            </div>
+        </div>
+        
+        <footer>
+            <p><b style="color: #810004;">The Patriot Website</b> | &copy; Copyright 2025</p>
+        </footer>
+
+    </main>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('options');
+            menu.classList.toggle('show');
+        }
+        
+        async function signIn() {
+        const data = {
+            email: document.getElementById("email").value,
+            password: document.getElementById("password").value
+        };
+
+        try {
+            const res = await fetch("http://localhost:5000/auth/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+            });
+
+            const result = await res.json();
+
+            if (!res.ok) {
+            alert(result.message || "Login failed");
+            return;
+            }
+
+            localStorage.setItem("authToken", result.token);
+
+            alert("Login successful!");
+
+            window.location.href = "main.html"; 
+
+        } catch (err) {
+            console.error(err);
+            alert("Server error");
+        }
+    }
+
+    </script>
+</body>
+</html>
