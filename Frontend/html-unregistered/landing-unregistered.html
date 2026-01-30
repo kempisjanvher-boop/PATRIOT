@@ -5,19 +5,334 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Patriot login</title>
         <link rel="stylesheet" href="/Frontend/css-unregistered/landing-unregistered.css">
+        <link rel="stylesheet" href="/Frontend/css-unregistered/footer.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="site-header"></div>
-    <script> 
-        fetch("./header-unregistered.html").then(res => res.text()).then(html => {
-            document.getElementById("site-header").innerHTML = html;
-            });
+        <main>
+            <section class="hero">
+                <div class="carousel-container">
+                    <img src="../../images/hero-bg.png" alt="Commencement Exercises" class="hero-img">
+                    
+                    <button class="arrow left">&#10094;</button>
+                    <button class="arrow right">&#10095;</button>
 
-        function toggleMenu() {
-            const menu = document.getElementById('options');
-            menu.classList.toggle('show');
-        }
-    </script>
+                    <div class="hero-overlay">
+                        <div class="hero-overlay-content">
+                            <div class="hero-text">
+                                <h2>PUP Parañaque Honors Class of 2025 in 11th Commencement Exercises</h2>
+                                <p>September 29, 2023</p>
+                            </div>
+                            
+                            <div class="dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="latest-news-section">
+                <div class="section-label">Latest Campus News</div>
+                
+                <div class="news-main-flex">
+                    <div class="news-content">
+                        <h1 class="news-title">PUP Parañaque Honors Class of 2025 in 11th Commencement Exercises</h1>
+                        <p class="news-author">Via Soderev Renz Silva</p>
+                        <hr class="news-divider">
+                        <p class="news-description">
+                            The Polytechnic University of the Philippines Parañaque Campus reached another proud milestone as it held its 11th Commencement Exercises on October 20, 2025, at Le Pavillon in Pasay City. The event celebrated the perseverance and achievements of Batch 2025 — a class that weathered challenges with resilience and emerged stronger.
+                        </p>
+                    </div>
+                    
+                    <div class="news-image-container">
+                        <img src="../../images/news-feature.png" alt="News Image" class="news-img">
+                        <div class="mini-dots">
+                            <span class="m-dot active"></span>
+                            <span class="m-dot"></span>
+                            <span class="m-dot"></span>
+                            <span class="m-dot"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="news-footer-row">
+                    <span class="publish-date">Published on October 31, 2025</span>
+                    <button class="read-more-btn">Read more</button>
+                </div>
+            </section>
+
+            <section class="tp-news-section">
+                <div class="tp-news-container">
+                    <h2 class="tp-section-title">TP NEWS</h2>
+                    
+                    <div class="tp-news-grid">
+                        <article class="news-card">
+                            <div class="card-image-wrapper">
+                                <img src="../../images/news1.png" alt="News 1">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">PUP Parañaque Honors Class of 2025 in 11th Commencement Exercises</h3>
+                                <hr class="card-divider">
+                                <p class="card-excerpt">
+                                    The Polytechnic University of the Philippines Parañaque Campus reached another proud milestone as it held its 11th Commencement Exercises on October 20, 2025, at Le Pavillon in Pasay City. The event celebrated the...
+                                </p>
+                                <div class="card-footer">
+                                    <span class="card-date">October 31, 2025</span>
+                                    <button class="card-read-more">Read more</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="news-card">
+                            <div class="card-image-wrapper">
+                                <img src="../../images/news2.png" alt="News 2">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">PUP Parañaque Honors Class of 2025 in 11th Commencement Exercises</h3>
+                                <hr class="card-divider">
+                                <p class="card-excerpt">
+                                    The Polytechnic University of the Philippines Parañaque Campus reached another proud milestone as it held its 11th Commencement Exercises on October 20, 2025, at Le Pavillon in Pasay City. The event celebrated the...
+                                </p>
+                                <div class="card-footer">
+                                    <span class="card-date">October 31, 2025</span>
+                                    <button class="card-read-more">Read more</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="news-card">
+                            <div class="card-image-wrapper">
+                                <img src="../../images/news3.png" alt="News 3">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">PUP Parañaque Honors Class of 2025 in 11th Commencement Exercises</h3>
+                                <hr class="card-divider">
+                                <p class="card-excerpt">
+                                    The Polytechnic University of the Philippines Parañaque Campus reached another proud milestone as it held its 11th Commencement Exercises on October 20, 2025, at Le Pavillon in Pasay City. The event celebrated the...
+                                </p>
+                                <div class="card-footer">
+                                    <span class="card-date">October 31, 2025</span>
+                                    <button class="card-read-more">Read more</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="news-card">
+                            <div class="card-image-wrapper">
+                                <img src="../../images/news4.png" alt="News 4">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">PUP Parañaque Honors Class of 2025 in 11th Commencement Exercises</h3>
+                                <hr class="card-divider">
+                                <p class="card-excerpt">
+                                    The Polytechnic University of the Philippines Parañaque Campus reached another proud milestone as it held its 11th Commencement Exercises on October 20, 2025, at Le Pavillon in Pasay City. The event celebrated the...
+                                </p>
+                                <div class="card-footer">
+                                    <span class="card-date">October 31, 2025</span>
+                                    <button class="card-read-more">Read more</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="see-more-wrapper">
+                        <a href="#" class="see-more-link">See more &rsaquo;</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tp-article-section">
+                <div class="tp-article-container">
+                    <div class="article-header-row">
+                        <h2 class="section-title">TP ARTICLE</h2>
+                        <a href="#" class="see-more-text">See more &rsaquo;</a>
+                    </div>
+
+                    <div class="article-grid">
+                        <div class="article-card" style="background-image: url('../../images/article1.png');">
+                            <div class="category-tag">EDITORIAL</div>
+                            <div class="article-overlay-text">
+                                <h3>Possible Corrupts as State Witnesses: Are They Truly Qualified?</h3>
+                                <p>via Rhonalie Yam and illustration by Juliana Gentallan</p>
+                            </div>
+                        </div>
+
+                        <div class="article-card" style="background-image: url('../../images/article2.png');">
+                            <div class="category-tag">PHOTO JOURNALISM</div>
+                            <div class="article-overlay-text">
+                                <h3>The side of the road: a photographed trip to the Philippines</h3>
+                                <p>via Google</p>
+                            </div>
+                        </div>
+
+                        <div class="article-card" style="background-image: url('../../images/article3.png');">
+                            <div class="category-tag">FEATURE WRITING</div>
+                            <div class="article-overlay-text">
+                                <h3>Possible Corrupts as State Witnesses: Are They Truly Qualified?</h3>
+                                <p>via Rhonalie Yam and illustration by Juliana Gentallan</p>
+                            </div>
+                        </div>
+
+                        <div class="article-card" style="background-image: url('../../images/article4.png');">
+                            <div class="category-tag">EDITORIAL</div>
+                            <div class="article-overlay-text">
+                                <h3>Is college worth it?</h3>
+                                <p>via Google</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-us-hero">
+                <div class="about-content">
+                    <div class="patriot-logo-container">
+                        <img src="../../images/Patriot.png" alt="The Patriot Logo" class="center-logo">
+                    </div>
+
+                    <h1 class="main-title">The Patriot</h1>
+                    <h2 class="sub-title">The Official Student Publication of PUP-Parañaque Campus</h2>
+
+                    <p class="about-description">
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of
+                    </p>
+
+                    <a href="#" class="about-btn">About US</a>
+                </div>
+            </section>
+
+            <section class="latest-updates-section">
+                <div class="update-label">Latest Campus Updates</div>
+                
+                <div class="update-flex-container">
+                    <div class="update-info">
+                        <h1 class="update-gold-title">Through Film and Solidarity, "Sineng Kalye" Amplifies the Voices of Farmers and Fisherfolk</h1>
+                        <p class="update-author">Via Soderev Renz Silva</p>
+                        <hr class="update-red-divider">
+                        <p class="update-description">
+                            RAGE! for Systematic Change held "Sineng Kalye" at the Pavilion, Sucat Brgy. Hall, Muntinlupa City on October 26, 2025, to celebrate Peasant Month. The event featured five indie films portraying the real struggles of farmers and fisherfolk in the Philippines. It also included a discussion on corruption and social issues, led by young leaders advocating for truth and justice. Through art and unity, the event reminded everyone that the youth and the masses can create change together.
+                        </p>
+                    </div>
+                    
+                    <div class="update-image-box">
+                        <img src="../../images/sineng kalye.png" alt="Sineng Kalye Event">
+                        <div class="update-slider-bars">
+                            <span class="u-bar active"></span>
+                            <span class="u-bar"></span>
+                            <span class="u-bar"></span>
+                            <span class="u-bar"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="update-footer-row">
+                    <span class="update-publish-date">Published on October 31, 2025</span>
+                    <button class="update-read-more">Read more</button>
+                </div>
+            </section>
+
+            <section class="tp-updates-section">
+                <div class="tp-updates-header">
+                    <h2 class="tp-updates-title">TP UPDATES</h2>
+                </div>
+
+                <div class="tp-updates-grid">
+                    <article class="update-card">
+                        <div class="update-img-container">
+                            <img src="../../images/updates1.png" alt="Baluyot Update">
+                        </div>
+                        <div class="update-card-body">
+                            <h3 class="update-title">NEWS UPDATE: Baluyot Declines CIDG Appearance, Denies Allegation</h3>
+                            <hr class="update-line">
+                            <p class="update-text">Polytechnic University of the Philippines (PUP) student journalist Jacob Baluyot declined to appear before the Philippine National Police...</p>
+                            <div class="update-footer">
+                                <span class="update-date">October 31, 2025</span>
+                                <button class="update-btn">Read more</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="update-card">
+                        <div class="update-img-container">
+                            <img src="../../images/updates2.png" alt="CSC Submission">
+                        </div>
+                        <div class="update-card-body">
+                            <h3 class="update-title">The PUP Parañaque Central Student Council (CSC) City has submitted its...</h3>
+                            <hr class="update-line">
+                            <p class="update-text">The Polytechnic University of the Philippines Parañaque Campus reached another proud milestone as it held its 11th Commencement...</p>
+                            <div class="update-footer">
+                                <span class="update-date">October 31, 2025</span>
+                                <button class="update-btn">Read more</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="update-card">
+                        <div class="update-img-container">
+                            <img src="../../images/updates3.png" alt="Job Fair">
+                        </div>
+                        <div class="update-card-body">
+                            <h3 class="update-title">PUP Parañaque Sends Off New Graduates Ready for the <br>Workfor...</h3>
+                            <hr class="update-line">
+                            <p class="update-text">Graduating students of PUP Parañaque were given a closer look at the realities of employment as the Office of Student Affairs...</p>
+                            <div class="update-footer">
+                                <span class="update-date">October 31, 2025</span>
+                                <button class="update-btn">Read more</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="update-card">
+                        <div class="update-img-container">
+                            <img src="../../images/updates4.png" alt="Commencement">
+                        </div>
+                        <div class="update-card-body">
+                            <h3 class="update-title">PUP Parañaque Honors Class of 2025 in 11th Commencement Exercises</h3>
+                            <hr class="update-line">
+                            <p class="update-text">The Polytechnic University of the Philippines Parañaque Campus reached another proud milestone as it held its 11th Commencement...</p>
+                            <div class="update-footer">
+                                <span class="update-date">October 31, 2025</span>
+                                <button class="update-btn">Read more</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="see-more-container">
+                    <a href="#" class="see-more-link">See more &rsaquo;</a>
+                </div>
+            </section>
+
+            <section class="cta-banner">
+                <div class="cta-content">
+                    <h2 class="cta-quote">I see, I heard, therefore I reveal.</h2>
+                    <button class="cta-post-btn">Post an Article</button>
+                </div>
+            </section>
+        </main>
+        <div id="site-footer"></div>
+
+        <script> 
+            fetch("./header-unregistered.html").then(res => res.text()).then(html => {
+                document.getElementById("site-header").innerHTML = html;
+                });
+
+            fetch("./footer.html")
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById("site-footer").innerHTML = html;
+                });
+
+            function toggleMenu() {
+                const menu = document.getElementById('options');
+                menu.classList.toggle('show');
+            }
+        </script>
     </body>
 </html>
