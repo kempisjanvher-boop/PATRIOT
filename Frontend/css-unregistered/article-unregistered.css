@@ -1,0 +1,41 @@
+.article-hero {
+    position: relative;
+    width: 100%;
+    height:300px;
+    background-image: url('../../images/hero-head.png'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.article-hero-overlay {
+    background-color: rgba(0, 0, 0, 0.6); 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-display-title {
+    color: #ffffff;
+    font-size: 80px; 
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 0;
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 768px) {
+    .news-hero {
+        height: 300px;
+    }
+    .news-display-title {
+        font-size: 60px;
+        letter-spacing: 2px;
+    }
+}
