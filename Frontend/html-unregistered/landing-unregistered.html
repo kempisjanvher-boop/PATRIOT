@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Patriot login</title>
         <link rel="stylesheet" href="/Frontend/css-unregistered/landing-unregistered.css">
+        <link rel="stylesheet" href="/Frontend/css-unregistered/footer.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
@@ -315,44 +316,17 @@
                 </div>
             </section>
         </main>
-
-        <footer class="main-footer">
-            <div class="footer-container">
-                <div class="footer-brand">
-                    <img src="../../images/Patriot2.png" alt="The Patriot Logo" class="footer-logo">
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/share/1Vs2BSnScS/"><img src="../../images/fb.png" alt="Facebook" class="custom-social-icon"></a>
-                        <a href="#"><img src="../../images/message.png" alt="Email" class="custom-social-icon"></a>
-                        <a href="https://www.instagram.com/puppq.campusjournalism?igsh=amNmYW1hZXF2dHQ0"><img src="../../images/insta.png" alt="Instagram" class="custom-social-icon"></a>
-                    </div>
-                </div>
-
-                <div class="footer-links">
-                    <h3>About Us</h3>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">Articles</a></li>
-                        <li><a href="#">Updates</a></li>
-                        <li><a href="#">Watch</a></li>
-                        <li><a href="#">Community</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-contact">
-                    <h3>Contact Us</h3>
-                    <p>puppq.campusjournalism@gmail.com</p>
-                </div>
-            </div>
-
-            <div class="copyright-bar">
-                <p>&copy; 2025 The Patriot. All rights reserved.</p>
-            </div>
-        </footer>
+        <div id="site-footer"></div>
 
         <script> 
             fetch("./header-unregistered.html").then(res => res.text()).then(html => {
                 document.getElementById("site-header").innerHTML = html;
+                });
+
+            fetch("./footer.html")
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById("site-footer").innerHTML = html;
                 });
 
             function toggleMenu() {
