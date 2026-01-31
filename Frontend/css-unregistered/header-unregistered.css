@@ -74,6 +74,7 @@ nav#options {
     top: 60px;
     width: 200px;
     border-radius: 5px;
+    z-index: 100;
 }
 
 nav#options ul {
