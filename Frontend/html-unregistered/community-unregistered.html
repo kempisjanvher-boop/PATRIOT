@@ -3,32 +3,154 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Patriot login</title>
+        <title>Community - Pokemain</title>
         <link rel="stylesheet" href="/Frontend/css-unregistered/community-unregistered.css">
         <link rel="stylesheet" href="/Frontend/css-unregistered/footer.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="site-header"></div>
+
         <main>
             <section class="community-hero">
                 <div class="community-hero-overlay">
                     <h1 class="community-display-title">COMMUNITY</h1>
                 </div>
             </section>
+
+            <div class="dashboard-wrapper">
+                
+                <aside class="left-column">
+                    <div class="nav-container">
+                        <div class="nav-item active">
+                            <img src="/images/bookmark.png" class="nav-icon">
+                            <span>Activity Feed</span>
+                            <span class="nav-badge">10</span>
+                        </div>
+                        <div class="nav-item">
+                            <img src="/images/profilepic.png" class="nav-icon">
+                            <span>My Profile</span>
+                        </div>
+                        <div class="nav-item">
+                            <img src="/images/settings.png" class="nav-icon">
+                            <span>Settings</span>
+                        </div>
+                        <div class="nav-item">
+                            <img src="/images/logout.png" class="nav-icon">
+                            <span>Logout</span>
+                        </div>
+                    </div>
+                </aside>
+
+                <section class="middle-column">
+                    <div class="feed-header-actions">
+                        <span class="feed-label">ACTIVITY FEED</span>
+                        <div class="top-icons">
+                            <img src="/images/filter.png" class="small-icon"> <span>Filter</span>
+                            <div class="right-icon-group">
+                                <img src="../../images/search.png" class="utility-icon">
+                                <img src="/images/notification.png" class="utility-icon">
+                                <img src="/images/community.png" class="utility-icon">
+                            </div>
+                        </div>
+                    </div>
+
+                    <article class="post-card">
+                        <div class="post-header">
+                            <div class="user-block">
+                                <div class="circle-avatar maroon">E</div>
+                                <div class="user-info">
+                                    <span class="user-name">Earl John Mariano</span>
+                                    <span class="post-time">1 week ago</span>
+                                </div>
+                            </div>
+                            <button class="action-outline-btn">ARTICLE</button>
+                        </div>
+                        <div class="post-media">
+                            <img src="/images/article1.png" alt="Post Image">
+                        </div>
+                        <div class="post-text">
+                            <h3>Make Money Online Through Advertising</h3>
+                            <p>It is probably the dream of any amateur astronomer to be able to be the boss of one of the great multi million dollar telescopes even if it was just.</p>
+                        </div>
+                        <div class="post-footer">
+                            <div class="stats">
+                                <span><img src="../../images/heart.png"> Like 30</span>
+                                <span><img src="../../images/comment.png"> Comment</span>
+                                <span><img src="../../images/share.png"> 34</span>
+                            </div>
+                            <span class="reply-btn">Reply</span>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <div class="post-header">
+                            <div class="user-block">
+                                <div class="circle-avatar maroon">E</div>
+                                <div class="user-info">
+                                    <span class="user-name">Earl John Mariano</span>
+                                    <span class="post-time">1 week ago</span>
+                                </div>
+                            </div>
+                            <button class="action-outline-btn">BIRTHDAY GREETINGS</button>
+                        </div>
+                        <div class="post-text border-top">
+                            <p><strong>Happy Birthday, Earl John Mariano!</strong></p>
+                            <p>Wishing you a day filled with joy, laughter, and wonderful memories. May this year bring you happiness, success, and everything you've been hoping for!</p>
+                        </div>
+                        <div class="post-footer">
+                            <div class="stats">
+                                <span><img src="../../images/heart.png"> Like 30</span>
+                                <span><img src="../../images/comment.png"> Comment</span>
+                                <span><img src="../../images/share.png"> 34</span>
+                            </div>
+                            <span class="reply-btn">Reply</span>
+                        </div>
+                    </article>
+                </section>
+
+                <aside class="right-column">
+                    <div class="community-box">
+                        <h4 class="column-title">Community</h4>
+                        <div class="avatar-row">
+                            <div class="circle-avatar blue">R</div>
+                            <div class="circle-avatar maroon">E</div>
+                            <div class="circle-avatar yellow">J</div>
+                            <div class="circle-avatar black">C</div>
+                        </div>
+                    </div>
+
+                    <div class="recommended-box">
+                        <div class="rec-header">
+                            <h4 class="rec-title">Recommended Articles</h4>
+                            <span class="dots">...</span>
+                        </div>
+                        <div class="mini-card">
+                            <img src="/images/article3.png">
+                            <h5>University Entrance Exam Q&A: Energy</h5>
+                            <p>Energy (Potential, Kinetic and Mechanical). We provide answered questions...</p>
+                        </div>
+                        <div class="mini-card">
+                            <img src="../../images/article3.png">
+                            <h5>University Entrance Exam Q&A: Force</h5>
+                            <p>We provide answered questions from actual past university entrance...</p>
+                        </div>
+                        <a href="#" class="see-all-link">see all</a>
+                    </div>
+                </aside>
+            </div>
         </main>
+
         <div id="site-footer"></div>
 
         <script> 
             fetch("./header-unregistered.html").then(res => res.text()).then(html => {
                 document.getElementById("site-header").innerHTML = html;
-                });
+            });
 
-            fetch("./footer.html")
-                .then(res => res.text())
-                .then(html => {
-                    document.getElementById("site-footer").innerHTML = html;
-                });
+            fetch("./footer.html").then(res => res.text()).then(html => {
+                document.getElementById("site-footer").innerHTML = html;
+            });
 
             function toggleMenu() {
                 const menu = document.getElementById('options');
