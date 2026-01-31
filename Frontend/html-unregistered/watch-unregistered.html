@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Patriot login</title>
+        <title>Patriot Watch</title>
         <link rel="stylesheet" href="/Frontend/css-unregistered/watch-unregistered.css">
         <link rel="stylesheet" href="/Frontend/css-unregistered/footer.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -16,6 +16,99 @@
                     <h1 class="watch-display-title">WATCH</h1>
                 </div>
             </section>
+
+            <div class="watch-section-wrapper">
+                <div class="watch-container">
+                    <main class="watch-main-content">
+                        <div class="watch-grid">
+                            <div class="watch-card">
+                                <div class="watch-card-video">
+                                    <video controls poster="/images/video-placeholder.png">
+                                        <source src="/images/vid.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div class="watch-card-body">
+                                    <h3>PUP Parañaque Honors Class of 2025 in 11th Commencement Exercises</h3>
+                                    <p>The Polytechnic University of the Philippines Parañaque Campus reached another proud milestone...</p>
+                                    <a href="#" class="read-more-link">Read more</a>
+                                </div>
+                            </div>
+                            
+                            <div class="watch-card">
+                                <div class="watch-card-video">
+                                    <video controls>
+                                        <source src="/videos/your-video-2.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div class="watch-card-body">
+                                    <h3>Highlights of the Year</h3>
+                                    <p>Experience the journey of the Batch of 2025 through this cinematic recap of their time at PUP...</p>
+                                    <a href="#" class="read-more-link">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="watch-pagination">
+                            <div class="page-btn active">1</div>
+                            <div class="page-btn">2</div>
+                            <div class="page-btn">3</div>
+                            <div class="page-btn">4</div>
+                            <div class="page-btn">5</div>
+                        </div>
+                    </main>
+
+                    <aside class="article-sidebar">
+                        <div class="sidebar-filters">
+                            <div class="filter-input-group">
+                                <select>
+                                    <option>Category</option>
+                                    <option>Academic</option>
+                                    <option>Extra Curricular</option>
+                                </select>
+                                <img src="/images/dropdown.png" class="sidebar-icon-img" alt="▼">
+                            </div>
+                            <div class="filter-input-group search-bar">
+                                <input type="text" placeholder="Search">
+                                <img src="/images/search.png" class="sidebar-icon-img" alt="🔍">
+                            </div>
+                        </div>
+
+                        <hr class="sidebar-divider">
+
+                        <div class="sidebar-results-box">
+                            <div class="sidebar-tabs">
+                                <div class="tab-item active" onclick="switchTab('result')">Result</div>
+                                <div class="tab-item" onclick="switchTab('latest')">Latest</div>
+                            </div>
+                            
+                            <div id="result-content" class="sidebar-list tab-content">
+                                <div class="side-item">
+                                    <img src="/images/news3.png" alt="">
+                                    <div class="side-item-info">
+                                        <h4>PUP Parañaque Honors Class of 2025 in 11th...</h4>
+                                        <small>October 31, 2025</small>
+                                    </div>
+                                </div>
+                                <div class="side-item">
+                                    <img src="/images/news3.png" alt="">
+                                    <div class="side-item-info">
+                                        <h4>PUP Parañaque Honors Class of 2025 in 11th...</h4>
+                                        <small>October 31, 2025</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="latest-content" class="sidebar-list tab-content" style="display: none;">
+                                <div class="no-results">No results found</div>
+                            </div>
+                        </div>
+                        
+                        <div class="side-nav-arrow">›</div>
+                    </aside>
+                </div>
+            </div>
         </main>
         <div id="site-footer"></div>
 
@@ -33,6 +126,22 @@
             function toggleMenu() {
                 const menu = document.getElementById('options');
                 menu.classList.toggle('show');
+            }
+            
+            function switchTab(tab) {
+                const resultContent = document.getElementById('result-content');
+                const latestContent = document.getElementById('latest-content');
+                const tabs = document.querySelectorAll('.tab-item');
+                tabs.forEach(t => t.classList.remove('active'));
+                if(tab === 'result') {
+                    resultContent.style.display = 'block';
+                    latestContent.style.display = 'none';
+                    tabs[0].classList.add('active');
+                } else {
+                    resultContent.style.display = 'none';
+                    latestContent.style.display = 'block';
+                    tabs[1].classList.add('active');
+                }
             }
         </script>
     </body>

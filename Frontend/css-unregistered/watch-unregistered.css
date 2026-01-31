@@ -31,11 +31,232 @@
 }
 
 @media (max-width: 768px) {
-    .news-hero {
+    .watch-hero {
         height: 300px;
     }
-    .news-display-title {
+    .watch-display-title {
         font-size: 60px;
         letter-spacing: 2px;
     }
+}
+
+.watch-section-wrapper {
+    background-color: #ffffff;
+    padding: 60px 0 60px 0;
+    font-family: sans-serif; 
+}
+
+.watch-container {
+    display: flex;
+    align-items: flex-start; 
+    width: 100%;
+    max-width: 1350px;
+    margin-left: 5%; 
+    margin-right: auto;
+    justify-content: space-between;
+    position: relative;
+    gap: 140px;
+}
+
+.watch-main-content {
+    flex: 0 0 70%;
+}
+
+.watch-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 60px;
+}
+
+.watch-card {
+    background: #fff;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease;
+}
+
+.watch-card-video {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.watch-card-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.watch-card-body { padding: 20px; }
+
+.watch-card-body h3 {
+    font-size: 18px;
+    color: #000;
+    margin: 0 0 12px 0;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.watch-card-body p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.read-more-link {
+    color: #810004;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    border-bottom: 1px solid #810004;
+}
+
+/* Sidebar styles maintained below */
+.article-sidebar {
+    flex: 0 0 18%; 
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-filters {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.filter-input-group {
+    position: relative;
+    width: 100%;
+}
+
+.filter-input-group select, 
+.filter-input-group input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 15px;
+    border: 1.5px solid #333333;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    background-color: #fff;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.sidebar-icon-img {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    height: 16px;
+    width: auto;
+}
+
+.sidebar-divider {
+    border: none;
+    border-top: 1.5px solid #333333;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.sidebar-results-box {
+    background: #f1e6e6;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 100%;
+    min-height: 200px;
+}
+
+.sidebar-tabs { display: flex; background: #fff; }
+
+.tab-item {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-top: 4px solid transparent; 
+}
+
+.tab-item.active {
+    background: #f1e6e6;
+    border-top: 4px solid #810004;
+    color: #000;
+}
+
+.sidebar-list { 
+    padding: 20px 15px; 
+}
+
+.no-results {
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+    font-style: italic;
+    padding: 40px 0;
+}
+
+.side-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.side-item:last-child { border-bottom: none; }
+
+.side-item img {
+    width: 70px;
+    height: 55px;
+    object-fit: cover;
+    background-color: #ddd;
+}
+
+.side-item-info h4 {
+    font-size: 13px;
+    margin: 0 0 5px 0;
+    color: #000;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.side-item-info small { font-size: 11px; color: #888; }
+
+.watch-pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+}
+
+.page-btn {
+    padding: 12px 22px;
+    border: 1px solid #eeeeee;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    background: #fff;
+}
+
+.page-btn.active { background: #810004; color: white; border-color: #810004; }
+
+.side-nav-arrow {
+    position: absolute;
+    right: -40px; 
+    top: 50%;
+    color: #810004;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
 }
