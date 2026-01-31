@@ -222,7 +222,7 @@
 .filter-input-group select, 
 .filter-input-group input {
     width: 100%;
-    box-sizing: border-box; /* Ensures padding doesn't break width */
+    box-sizing: border-box;
     padding: 12px 15px;
     border: 1.5px solid #333333;
     border-radius: 4px;
@@ -271,7 +271,7 @@
     cursor: pointer;
     font-weight: 600;
     transition: all 0.3s ease;
-    border-top: 4px solid transparent; /* Prevents layout jump when active */
+    border-top: 4px solid transparent; 
 }
 
 .tab-item.active {
@@ -339,7 +339,7 @@
 
 .side-nav-arrow {
     position: absolute;
-    right: -40px; /* Moves arrow outside the container */
+    right: -40px; 
     top: 50%;
     color: #810004;
     font-size: 24px;
