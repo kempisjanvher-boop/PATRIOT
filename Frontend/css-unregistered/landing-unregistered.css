@@ -526,13 +526,13 @@ body {
 @media (max-width: 768px) {
     .tp-news-grid, .tp-updates-grid { grid-template-columns: 1fr; }
     .cta-content { flex-direction: column; gap: 20px; text-align: center; }
-    .cta-quote { font-size: 20px; }
+    .cta-quote { font-size: 18px; }
     .about-us-hero { padding: 40px 20px; min-height: 80vh; }
-    .about-description { font-size: 14px; line-height: 1.6; }
+    .about-description { font-size: 12Fpx; line-height: 1.4; }
     
     .hero { height: 400px; }
     .hero-overlay { padding: 20px; }
-    .hero-text h2 { font-size: 22px; }
+    .hero-text h2 { font-size: 20px; }
     
     /* Ensuring horizontal alignment in mobile footers */
     .news-footer-row, .update-footer-row {
@@ -543,21 +543,21 @@ body {
     }
 
     .publish-date, .update-publish-date {
-        font-size: 12px;
+        font-size: 10px;
         flex: 1;
     }
 
     .read-more-btn, .update-read-more {
         padding: 8px 20px;
-        font-size: 14px;
+        font-size: 12px;
         white-space: nowrap; /* Prevents button text from wrapping */
     }
 }
 
 @media (max-width: 480px) {
-    .cta-quote { font-size: 18px; }
-    .section-label, .update-label { font-size: 20px; }
-    .news-title, .update-gold-title { font-size: 24px; }
+    .cta-quote { font-size: 16px; }
+    .section-label, .update-label { font-size: 18px; }
+    .news-title, .update-gold-title { font-size: 22px; }
     
     .news-footer-row, .update-footer-row {
         padding: 5px 0;
@@ -569,6 +569,6 @@ body {
 
     .read-more-btn, .update-read-more {
         padding: 6px 15px;
-        font-size: 12px;
+        font-size: 10px;
     }
 }
