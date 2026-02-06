@@ -60,6 +60,7 @@ body {
     font-size: 30px;
     cursor: pointer;
     padding: 20px;
+    z-index: 2;
 }
 
 .left { left: 20px; }
@@ -117,7 +118,7 @@ body {
 .update-flex-container {
     display: flex;
     gap: 50px;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .news-content,
@@ -172,7 +173,7 @@ body {
 .update-slider-bars {
     position: absolute;
     bottom: 15px;
-    right: 40%;
+    right: 5%; /* Adjusted for better alignment */
     display: flex;
     gap: 8px;
 }
@@ -526,7 +527,48 @@ body {
     .tp-news-grid, .tp-updates-grid { grid-template-columns: 1fr; }
     .cta-content { flex-direction: column; gap: 20px; text-align: center; }
     .cta-quote { font-size: 20px; }
-    .about-us-hero { padding: 40px 20px; }
+    .about-us-hero { padding: 40px 20px; min-height: 80vh; }
     .about-description { font-size: 14px; line-height: 1.6; }
+    
+    .hero { height: 400px; }
+    .hero-overlay { padding: 20px; }
+    .hero-text h2 { font-size: 22px; }
+    
+    /* Ensuring horizontal alignment in mobile footers */
+    .news-footer-row, .update-footer-row {
+        flex-direction: row !important; /* Forces row layout */
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .publish-date, .update-publish-date {
+        font-size: 12px;
+        flex: 1;
+    }
+
+    .read-more-btn, .update-read-more {
+        padding: 8px 20px;
+        font-size: 14px;
+        white-space: nowrap; /* Prevents button text from wrapping */
+    }
 }
 
+@media (max-width: 480px) {
+    .cta-quote { font-size: 18px; }
+    .section-label, .update-label { font-size: 20px; }
+    .news-title, .update-gold-title { font-size: 24px; }
+    
+    .news-footer-row, .update-footer-row {
+        padding: 5px 0;
+    }
+
+    .publish-date, .update-publish-date {
+        font-size: 10px;
+    }
+
+    .read-more-btn, .update-read-more {
+        padding: 6px 15px;
+        font-size: 12px;
+    }
+}
